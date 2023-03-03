@@ -25,7 +25,7 @@ Data is stored on the Payment Gateway side (unsure of the compliance)
 | 4897453568485113 | Declined |
 | 5420951756276171 | Declined |
 
-| <Any 16 digit card> | Paid |
+<Any 16 digit card> : Paid 
 
 Bank Simulator processes payments and submits
 
