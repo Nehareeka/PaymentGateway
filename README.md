@@ -9,6 +9,13 @@
 ## Assumptions
 Data is stored on the Payment Gateway side (unsure of the compliance)
 
+## Steps to Run
+
+1. Make sure all three projects are set as startup projects
+2. Use swagger for documentation and postman to send requests
+3. Get token which is set for subsequent request authorization
+4. Invoke other APIs
+
 ## Test Data
 
 #### Source: https://www.checkout.com/docs/testing/response-code-testing
