@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "e6ec0c02-122a-4b7e-85e8-c36ae392372c",
+		"name": "PaymentGateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Get Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.text();\r",
+									"pm.globals.set(\"Token\", data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7014/Token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"Token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Process Payments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cardNumber\": \"ff\",\r\n  \"expiryMonth\": 2,\r\n  \"expiryYear\": 2000,\r\n  \"cardHolderName\": \"string\",\r\n  \"cvv\": \"1\",\r\n  \"merchantId\": \"string\",\r\n  \"customerName\": \"string\",\r\n  \"amount\": 10,\r\n  \"currency\": \"USD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7014/Payments/Process",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"Payments",
+								"Process"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment Details by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7014/Payments/ac67ffc3-62c5-4ddd-9d69-ac3a46e6cb8d",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7014",
+							"path": [
+								"Payments",
+								"ac67ffc3-62c5-4ddd-9d69-ac3a46e6cb8d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
