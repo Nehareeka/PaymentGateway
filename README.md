@@ -29,18 +29,7 @@ Data is stored on the Payment Gateway side (unsure of the compliance)
 
 Bank Simulator processes payments and submits
 
-
-
-### Test Data
-
-Test data based on checkout documentation responses 
-
-https://docs.checkout.com/docs/testing
-
-
-#### Responses
-
-To test the mock bank API responses, create a transaction with the amount listed below to replicate the required response.
+#### Response Codes
 
 | Amount        | Response         
 | ------------- |:-------------:| 
@@ -51,7 +40,7 @@ To test the mock bank API responses, create a transaction with the amount listed
 | 404 | Not Found |
 | 500 | Internal Server Error |
 
-#### ToDos:
+#### To Dos:
 Tokenize the request
 Get all transactions within a date range, sorted by success/failure
 Add Docker support
