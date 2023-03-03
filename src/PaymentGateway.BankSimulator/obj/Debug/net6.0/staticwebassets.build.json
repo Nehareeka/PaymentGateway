@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "HCCErUTSB/YhfJ0LCHFolQ//3iTKfjPCHSzhG9VdDas=",
+  "Source": "PaymentGateway.BankSimulator",
+  "BasePath": "_content/PaymentGateway.BankSimulator",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
