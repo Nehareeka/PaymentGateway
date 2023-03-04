@@ -47,7 +47,13 @@ Bank Simulator processes payments and submits
 | 404 | Not Found |
 | 500 | Internal Server Error |
 
+
+#### Go to https://github.com/Nehareeka/ServerlessPaymentGateway for a different implementation of this project using AWS lamda and DynamoDB in order to simulate a bank
+
+
 #### To Dos:
 Tokenize the request
+
 Get all transactions within a date range, sorted by success/failure
+
 Add Docker support
